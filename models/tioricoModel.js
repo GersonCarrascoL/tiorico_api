@@ -1,3 +1,4 @@
+/// JEANETTE
 const db = require('../models/database');
 
 UserModel = {}
@@ -73,3 +74,5 @@ UserModel.getTransactions = (data) => {
     })
 }
 module.exports = UserModel
+
+/// FIN JEANETTE

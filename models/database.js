@@ -1,3 +1,4 @@
+/// JEANETTE
 const { db } = require('../config/config');
 
 const Sequelize = require('sequelize'),
@@ -22,3 +23,5 @@ const database = {};
 database.sequelize = sequelize;
 
 module.exports = database;
+
+/// FIN JEANETTE

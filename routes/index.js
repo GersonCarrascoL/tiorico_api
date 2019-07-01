@@ -1,3 +1,4 @@
+/// ROBERT
 const express = require('express'),
     Router = express.Router(),
     { url } = require('../config/config'),
@@ -7,7 +8,7 @@ const express = require('express'),
 
 Router
     /*
-        Get transaction
+        Post SignIn
     */
    .post( url.urlV1 + '/users/signin',[
        check('userNick').exists().isString(),
@@ -17,16 +18,21 @@ Router
        check('idHouse').exists().isInt()
    ], TioRicoController.register)
 
+/// FIN ROBERT
+
+/// ALEJANDRO
     /*
-        Get transaction
+        Post Login
     */
    .post( url.urlV1 + '/users/login', [
         check('userNick').exists().isString(),
         check('userPassword').exists().isString(),
    ],TioRicoController.login)
+/// FIN ALEJANDRO
 
+/// JUAN
     /*
-        Get transaction
+        Post transaction
     */
     .post( url.urlV1 + '/transactions',[
         check('idUser').exists().isInt().withMessage('Debe ser un número entero.'),
@@ -55,7 +61,9 @@ Router
         }),
         check('quantity').exists().isFloat(),
     ], TioRicoController.save)
+/// FIN JUAN
 
+/// KOKO
     /*
         Get transaction
     */
@@ -67,6 +75,8 @@ Router
             }
         })
     ], TioRicoController.getTransaction)
+/// FIN KOKO
 
-
+/// ROBERT
 module.exports = Router
+/// FIN ROBERT

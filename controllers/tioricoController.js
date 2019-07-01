@@ -1,3 +1,4 @@
+/// Robert
 const um = require('../models/tioricoModel'),
     bcrypt = require('bcrypt'),
     SALTROUNDS = 10,
@@ -72,6 +73,9 @@ TioricoController.register = (req,res) => {
             })
 }
 
+/// FIN ROBERT
+
+/// ALEJANDRO
 TioricoController.login = (req, res) => {
     let user = {
         userName: req.body.userNick,
@@ -125,7 +129,10 @@ TioricoController.login = (req, res) => {
                     })
             })
 }
+/// FIN ALEJANDRO
 
+
+/// KOKO
 TioricoController.save = ( req, res) => {
     let transaction = {
         idUser: req.body.idUser,
@@ -202,7 +209,9 @@ TioricoController.save = ( req, res) => {
                     })
         })
 }
+/// FIN KOKO
 
+/// JUAN
 TioricoController.getTransaction = (req, res) => {
     let data = {
         idHouse: req.query.idHouse
@@ -234,5 +243,8 @@ TioricoController.getTransaction = (req, res) => {
                     })
             })
 }
+/// FIN JUAN
 
+/// ROBERT
 module.exports = TioricoController
+/// FIN ROBERT
